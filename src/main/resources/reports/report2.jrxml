@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af01d584-f8fe-43fe-96ca-d13f38845102">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="subdata" uuid="0489e200-1fb8-4c2f-b47f-4656dcb3fb29">
+		<parameter name="subdata" class="net.sf.jasperreports.engine.JRDataSource" isForPrompting="false"/>
+		<parameter name="param1" class="java.lang.String"/>
+		<parameter name="param2" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="subdata" class="net.sf.jasperreports.engine.JRDataSource" isForPrompting="false"/>
+	<parameter name="param1" class="java.lang.String"/>
+	<parameter name="param2" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="400" splitType="Stretch">
+			<image>
+				<reportElement x="138" y="50" width="261" height="222" uuid="5d074a77-c13b-4212-a77a-dcd9bedd1b9a"/>
+				<imageExpression><![CDATA["/Users/onnuricis/Documents/acts29/app/oms/WebContent/reports/reform2017.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="123" y="330" width="100" height="20" uuid="bc427b7e-3146-47db-abc9-6d8fa63fee55"/>
+				<textFieldExpression><![CDATA[$P{param1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="330" width="100" height="20" uuid="d68753b1-3f7c-407c-899b-acd9933c4947"/>
+				<textFieldExpression><![CDATA[$P{param2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="363" width="100" height="20" uuid="2292fd1a-268f-48e4-b40d-746577eaf96a"/>
+				<textFieldExpression><![CDATA[""+$P{subdata}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="150"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
